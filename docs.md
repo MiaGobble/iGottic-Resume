@@ -25,8 +25,12 @@ Use **Export PDF**. The file is selectable text (not a screenshot), with human-r
 
 ## Build / deploy
 
+GitHub Pages builds automatically on push to `main` via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+
+Locally:
+
 ```bash
 npm run build
 ```
 
-Serve the `dist/` folder (GitHub Pages, Cloudflare Pages, Netlify, etc.).
+Serve the `dist/` folder to preview.
