@@ -2,7 +2,7 @@ export function initReveal(root: ParentNode = document): void {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const nodes = Array.from(root.querySelectorAll<HTMLElement>(".reveal"));
 
-  if (reduce || !("IntersectionObserver" in window) || !("animate" in Element.prototype)) {
+  if (reduce || !("IntersectionObserver" in window)) {
     nodes.forEach((el) => el.classList.add("is-static"));
     return;
   }
@@ -14,21 +14,23 @@ export function initReveal(root: ParentNode = document): void {
         const el = entry.target as HTMLElement;
         observer.unobserve(el);
         el.classList.add("is-in");
-        el.animate(
-          [
-            { opacity: 0, transform: "translateY(1.5rem)" },
-            { opacity: 1, transform: "none" },
-          ],
-          { duration: 700, easing: "ease", fill: "forwards" },
-        );
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+    { threshold: 0.08, rootMargin: "0px 0px -4% 0px" },
   );
 
-  nodes.forEach((el) => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(1.5rem)";
-    observer.observe(el);
+  nodes.forEach((el) => observer.observe(el));
+
+  // Firefox (and some edge cases) can miss the initial intersection pass.
+  requestAnimationFrame(() => {
+    nodes.forEach((el) => {
+      if (el.classList.contains("is-in") || el.classList.contains("is-static")) return;
+      const rect = el.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      if (rect.top < vh * 0.92 && rect.bottom > 0) {
+        el.classList.add("is-in");
+        observer.unobserve(el);
+      }
+    });
   });
 }

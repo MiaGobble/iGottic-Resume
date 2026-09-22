@@ -27,12 +27,6 @@ export function renderResume(root: HTMLElement, bundle: ResumeBundle): void {
 
   root.innerHTML = `
     <div class="grain" aria-hidden="true"></div>
-    <svg class="svg-filters" aria-hidden="true" focusable="false">
-      <filter id="paper" x="0" y="0" width="100%" height="100%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
-        <feColorMatrix type="matrix" values="0 0 0 0 0.76  0 0 0 0 0.73  0 0 0 0 0.68  0 0 0 0.18 0" in="n"/>
-      </filter>
-    </svg>
 
     <header class="site-header">
       <div class="header-inner">
