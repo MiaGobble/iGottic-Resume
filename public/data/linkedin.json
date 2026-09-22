@@ -1,0 +1,112 @@
+{
+  "name": "Mia Gobble",
+  "headline": "Producer & Generalist Game Developer",
+  "location": "Charlotte, North Carolina, United States",
+  "about": "I am a game developer specializing in Roblox development but aspiring to go off-platform! I'm always looking for opportunities to work with those willing to take risks and try new things. My philosophy with game development is to create new ideas for new games. I look up to studios who share a similar philosophy, rather than making safe sequels that contribute to an already oversaturated game market.",
+  "experience": [
+    {
+      "title": "Talent Manager & Lead Developer",
+      "company": "Tencell Studios",
+      "start": "Aug 2026",
+      "end": "Present",
+      "current": true,
+      "description": "I now handle talent management at Tencell Studios in addition to my development work. Some of my new responsibilities include talent outreach, interview processing, skillset evaluation, and more."
+    },
+    {
+      "title": "Producer & CEO",
+      "company": "Oxomo Games",
+      "start": "Apr 2025",
+      "end": "Present",
+      "current": true,
+      "description": "Oxomo Games is a brand new studio created by me, aiming to take risks with game design and discover new audiences on Roblox. My time here is spent producing and generalizing, ensuring we get high-quality games released. We're excited to soon release Velocity and Deep Depths. This studio is my opportunity to try design ideas and workflows before I apply a similar philosophy to my main line of work."
+    },
+    {
+      "title": "Producer & Lead Developer",
+      "company": "Tencell Studios",
+      "start": "Aug 2024",
+      "end": "Aug 2026",
+      "current": false,
+      "description": "I used to work on Slap Battles! I took on a variety of roles, including project management, data analysis, game design, generalist development, and scrum leadership. During my time, I helped the game reach a peak of 149k concurrent users. Under my leadership, I directly increased engagement, retention, and revenue, all while keeping the community satisfied."
+    },
+    {
+      "title": "Generalist Developer",
+      "company": "Tencell Studios",
+      "start": "Mar 2024",
+      "end": "Aug 2024",
+      "current": false,
+      "description": "Prior to being a producer and lead developer, I was a generalist development contractor, working on critical reworks to Slap Battles."
+    },
+    {
+      "title": "Narrative Deputy Lead",
+      "company": "ASGC",
+      "start": "Jun 2026",
+      "end": "Jul 2026",
+      "current": false,
+      "description": "I was a narrative lead for the community gamejam project for ASGC. It was my job to work between the department leads and contributors to create a complete and interesting narrative design, mostly as a reviewer to narrative writing."
+    },
+    {
+      "title": "Research Panelist",
+      "company": "Meta",
+      "start": "Apr 2025",
+      "end": "Apr 2026",
+      "current": false,
+      "description": "I was a part of Meta's AR/VR User Research Panel. During my time there, I actively tested new AR/VR products geared towards developers of the Horizon Worlds platform, leaving critical feedback about workflows and design decisions."
+    },
+    {
+      "title": "Producer & CEO",
+      "company": "Iconic Gaming",
+      "start": "May 2018",
+      "end": "Apr 2025",
+      "current": false,
+      "description": "Iconic Gaming is a studio I founded that focused on pushing creative online games on the Roblox platform. As of April 2025, I handed off the CEO position to pursue new opportunities. During my time, I created back-to-back projects that succeeded, often peaking at 2kâ€“12k CCU. I handled production, lead development, hiring management, and more."
+    },
+    {
+      "title": "Event Organizer",
+      "company": "Roblox",
+      "start": "Jul 2021",
+      "end": "Jan 2025",
+      "current": false,
+      "description": "I previously created developer-oriented educational events on the Roblox platform. These events aimed to be engaging, memorable, and valuable for new developers getting started."
+    },
+    {
+      "title": "Accelerator Program Member",
+      "company": "Roforco",
+      "start": "Jun 2023",
+      "end": "Mar 2024",
+      "current": false,
+      "description": "Iconic Gaming was funded and guided by the Roforco Accelerator program as a part of YCombinator 22. The funded project was Disaster Masters, a one-against-all disaster genre twist on Roblox."
+    },
+    {
+      "title": "Game Developer",
+      "company": "Outstanding Move",
+      "start": "Aug 2022",
+      "end": "Mar 2023",
+      "current": false,
+      "description": "Responsible for front-end gameplay programming and plugin tools development. Most notably worked on Crocs World, a branded experience for the Crocs shoe company."
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Level Up Gaming",
+      "start": "May 2022",
+      "end": "Sep 2022",
+      "current": false,
+      "description": "Worked on Super Hero Tycoon and another unreleased project, recoding core systems and reworking visuals using a proprietary framework."
+    },
+    {
+      "title": "Contract Programmer",
+      "company": "Swenzje Games",
+      "start": "May 2022",
+      "end": "May 2022",
+      "current": false,
+      "description": "Built a parkour system for Combat Warriors on Roblox, including ledge climbing, pole swinging, and more."
+    },
+    {
+      "title": "Programmer",
+      "company": "Games Unite",
+      "start": "Jul 2020",
+      "end": "Oct 2021",
+      "current": false,
+      "description": "Worked on an upcoming FPS on Roblox. Responsible for an additive animation system and rigid body physics system."
+    }
+  ]
+}

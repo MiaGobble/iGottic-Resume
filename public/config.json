@@ -1,0 +1,23 @@
+{
+  "name": "Mia Gobble",
+  "brand": "iGottic",
+  "tagline": "Everything-developer and producer shipping games that earn billions of sessions.",
+  "email": "miagobble@duck.com",
+  "discord": "@igottic",
+  "coreSkills": [
+    "Production & Leadership",
+    "Luau / Gameplay Systems",
+    "UI/UX Design & Implementation",
+    "Music Composition",
+    "Talent Management"
+  ],
+  "sources": {
+    "portfolio": "https://igottic.com/",
+    "linkedin": "https://www.linkedin.com/in/mia-gobble/",
+    "blog": "https://blog.igottic.com",
+    "github": "https://github.com/MiaGobble"
+  },
+  "pdf": {
+    "filename": "Mia-Gobble-Resume.pdf"
+  }
+}

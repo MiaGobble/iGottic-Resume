@@ -1,0 +1,124 @@
+{
+  "projects": [
+    {
+      "name": "Slap Battles",
+      "creator": "Tencell",
+      "peakCcu": "146,305",
+      "timeline": "March 2024 - June 2026",
+      "contributions": "Production, Lead Generalist Development",
+      "summary": "During my time here, I led Slap Battles and directed and developed parts of the game that led to an increase in revenue, engagement, and retention.",
+      "url": "https://www.roblox.com/games/6403373529/Slap-Battles"
+    },
+    {
+      "name": "Piggy",
+      "creator": "MiniToon",
+      "peakCcu": "533,409",
+      "timeline": "June 2026 - Aug 2026",
+      "contributions": "Talent Management",
+      "summary": "I helped with connecting talent to the team for development on both already-released and new projects.",
+      "url": "https://www.roblox.com/games/4623386862/Piggy"
+    },
+    {
+      "name": "Knockout!",
+      "creator": "blade_stack",
+      "peakCcu": "624,983",
+      "timeline": "June 2026 - Present",
+      "contributions": "Talent Management",
+      "summary": "I helped with connecting talent to the team for development on both already-released and new projects.",
+      "url": "https://www.roblox.com/games/136764190843219/Knockout"
+    },
+    {
+      "name": "High Peaks",
+      "creator": "MiniToon",
+      "peakCcu": "N/A",
+      "timeline": "July 2026 - Present",
+      "contributions": "Owner, Production, Lead Development",
+      "summary": "Owner, Production, Lead Development for High Peaks.",
+      "url": "https://www.roblox.com/games/75617342399094/High-Peaks"
+    },
+    {
+      "name": "Velocity",
+      "creator": "iGottic",
+      "peakCcu": "N/A",
+      "timeline": "Jan 2026 - Present",
+      "contributions": "Owner, Production, Lead Development",
+      "summary": "My job here is to lead the project to make sure everything moves at the pace we need.",
+      "url": "https://www.roblox.com/games/70959785823053/Velocity"
+    },
+    {
+      "name": "Care For Cats!",
+      "creator": "Misfits",
+      "peakCcu": "9,164",
+      "timeline": "Jan 2026 - Present",
+      "contributions": "Talent Management",
+      "summary": "I helped with connecting talent to the team for development on both already-released and new projects.",
+      "url": "https://www.roblox.com/games/103510455221561/Care-for-Cats"
+    },
+    {
+      "name": "Deep Depths",
+      "creator": "iGottic",
+      "peakCcu": "N/A",
+      "timeline": "March 2025 - Present",
+      "contributions": "Owner, Production, Lead Development",
+      "summary": "Like Velocity, my job here is to lead the project to make sure everything moves at the pace we need.",
+      "url": "https://www.roblox.com/games/127006305811791/Deep-Depths"
+    },
+    {
+      "name": "No-Scope Arcade",
+      "creator": "iGottic",
+      "peakCcu": "12,000",
+      "timeline": "Feb 2021 - Apr 2025",
+      "contributions": "Game Owner & Lead Dev",
+      "summary": "I eventually transferred development to a team, at which point I focused on leadership.",
+      "url": "https://www.roblox.com/games/6407649031/UPDATE-No-Scope-Arcade"
+    },
+    {
+      "name": "No-Scope Sniping",
+      "creator": "iGottic",
+      "peakCcu": "5,000",
+      "timeline": "May 2020 - Apr 2025",
+      "contributions": "Game Owner & Lead Dev",
+      "summary": "Every new major update of this game helped me learn a lot of what I know now, ranging from leadership to development, and everything in-between.",
+      "url": "https://www.roblox.com/games/5081773298/No-Scope-Sniping"
+    },
+    {
+      "name": "Combat Warriors",
+      "creator": "Swenzje Games",
+      "peakCcu": "76,948",
+      "timeline": "May 2022 - May 2022",
+      "contributions": "Programming",
+      "summary": "During my time here, I worked on a parkour movement system, which included ledge climbing, pole swinging, and more.",
+      "url": "https://www.roblox.com/games/4282985734/GORE-V2-Combat-Warriors"
+    }
+  ],
+  "socials": [
+    {
+      "label": "Twitter",
+      "url": "https://github.com/MiaGobble"
+    },
+    {
+      "label": "SoundCloud",
+      "url": "https://soundcloud.com/igottic"
+    },
+    {
+      "label": "YouTube Music",
+      "url": "https://www.youtube.com/channel/UCpr8CtPooRFKw1NBWbSFywQ"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/c/iGotticDev"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/mia-gobble/"
+    },
+    {
+      "label": "Roblox",
+      "url": "https://www.roblox.com/users/66342641/profile"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/MiaGobble"
+    }
+  ]
+}
