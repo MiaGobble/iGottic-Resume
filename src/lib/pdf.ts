@@ -279,9 +279,10 @@ export async function exportResumePdf(bundle: ResumeBundle): Promise<void> {
   doc.setFontSize(10);
   doc.setTextColor(40, 40, 40);
   y = wrap(doc, config.coreSkills.join("  ·  "), textLeft, y, CONTENT_W, 5);
-  y += 6;
 
-  // Experience (grouped by company)
+  // Experience starts on a new page after Core Skills
+  doc.addPage();
+  y = MARGIN;
   y = sectionTitle(doc, "Experience", y);
   for (const group of companies) {
     y = ensureSpace(doc, y, 24);
@@ -301,9 +302,9 @@ export async function exportResumePdf(bundle: ResumeBundle): Promise<void> {
       doc.setFontSize(8.5);
       doc.setTextColor(100, 100, 100);
       doc.text(group.duration, companyX, y);
-      y += 5;
+      y += 7;
     } else {
-      y += 1;
+      y += 5;
     }
 
     for (const job of group.roles) {
