@@ -1,5 +1,6 @@
 import { jsPDF } from "jspdf";
 import type { ResumeBundle } from "./types";
+import { groupExperience, splitParagraphs } from "./experience";
 
 const PAGE_W = 215.9;
 const PAGE_H = 279.4;
@@ -121,6 +122,27 @@ function ensureSpace(doc: jsPDF, y: number, need: number): number {
   return y;
 }
 
+function wrapParagraphs(
+  doc: jsPDF,
+  text: string,
+  x: number,
+  y: number,
+  maxWidth: number,
+  lineHeight: number,
+  paragraphGap = 2.5,
+): number {
+  const paragraphs = splitParagraphs(text);
+  for (let i = 0; i < paragraphs.length; i++) {
+    y = wrap(doc, paragraphs[i], x, y, maxWidth, lineHeight);
+    if (i < paragraphs.length - 1) y += paragraphGap;
+  }
+  return y;
+}
+
+function logoFormat(path: string): "PNG" | "JPEG" {
+  return /\.jpe?g$/i.test(path) ? "JPEG" : "PNG";
+}
+
 function sectionTitle(doc: jsPDF, label: string, y: number): number {
   y = ensureSpace(doc, y, 14);
   doc.setFont("RockSalt", "normal");
@@ -135,6 +157,7 @@ export async function exportResumePdf(bundle: ResumeBundle): Promise<void> {
   const { config, profile, portfolio } = bundle;
   const doc = new jsPDF({ unit: "mm", format: "letter" });
   const name = profile.name || config.name;
+  const companies = groupExperience(profile.experience);
 
   await registerFonts(doc);
 
@@ -142,6 +165,23 @@ export async function exportResumePdf(bundle: ResumeBundle): Promise<void> {
     loadImage("/assets/images/banner.png"),
     loadImage("/assets/images/pfp.jpg"),
   ]);
+
+  const logoEntries = await Promise.all(
+    companies
+      .filter((g) => g.logo)
+      .map(async (g) => {
+        try {
+          const img = await loadImage(g.logo!);
+          const data = coverCropDataUrl(img, 1, 1, logoFormat(g.logo!) === "JPEG" ? "image/jpeg" : "image/png", 256);
+          return [g.company, { data, format: logoFormat(g.logo!) }] as const;
+        } catch {
+          return null;
+        }
+      }),
+  );
+  const logos = new Map(
+    logoEntries.filter((e): e is NonNullable<typeof e> => !!e),
+  );
 
   const bannerBoxH = 42;
   const bannerData = coverCropDataUrl(
@@ -230,7 +270,7 @@ export async function exportResumePdf(bundle: ResumeBundle): Promise<void> {
     y += 2;
     doc.setFont("MavenPro", "normal");
   }
-  y = wrap(doc, profile.about, textLeft, y, CONTENT_W, 5);
+  y = wrapParagraphs(doc, profile.about, textLeft, y, CONTENT_W, 5);
   y += 6;
 
   // Skills
@@ -241,25 +281,50 @@ export async function exportResumePdf(bundle: ResumeBundle): Promise<void> {
   y = wrap(doc, config.coreSkills.join("  ·  "), textLeft, y, CONTENT_W, 5);
   y += 6;
 
-  // Experience
+  // Experience (grouped by company)
   y = sectionTitle(doc, "Experience", y);
-  for (const job of profile.experience) {
-    y = ensureSpace(doc, y, 22);
-    doc.setFont("MavenPro", "bold");
-    doc.setFontSize(10.5);
-    doc.setTextColor(19, 24, 27);
-    y = wrap(doc, `${job.title} — ${job.company}`, textLeft, y, CONTENT_W, 5);
-    doc.setFont("MavenPro", "normal");
-    doc.setFontSize(9);
-    doc.setTextColor(100, 100, 100);
-    doc.text(`${job.start} – ${job.end}`, textLeft, y);
-    y += 5;
-    if (job.description) {
-      doc.setTextColor(40, 40, 40);
-      doc.setFontSize(9.5);
-      y = wrap(doc, job.description, textLeft, y, CONTENT_W, 4.5);
+  for (const group of companies) {
+    y = ensureSpace(doc, y, 24);
+    const logoSize = 10;
+    const logo = logos.get(group.company);
+    if (logo) {
+      doc.addImage(logo.data, logo.format, textLeft, y - 3, logoSize, logoSize);
     }
-    y += 4;
+    const companyX = textLeft + (logo ? logoSize + 3 : 0);
+    doc.setFont("MavenPro", "bold");
+    doc.setFontSize(11);
+    doc.setTextColor(19, 24, 27);
+    doc.text(group.company, companyX, y);
+    y += 5;
+    if (group.duration) {
+      doc.setFont("MavenPro", "normal");
+      doc.setFontSize(8.5);
+      doc.setTextColor(100, 100, 100);
+      doc.text(group.duration, companyX, y);
+      y += 5;
+    } else {
+      y += 1;
+    }
+
+    for (const job of group.roles) {
+      y = ensureSpace(doc, y, 18);
+      doc.setFont("MavenPro", "bold");
+      doc.setFontSize(10);
+      doc.setTextColor(19, 24, 27);
+      y = wrap(doc, job.title, textLeft, y, CONTENT_W, 4.5);
+      doc.setFont("MavenPro", "normal");
+      doc.setFontSize(8.5);
+      doc.setTextColor(100, 100, 100);
+      doc.text(`${job.start} – ${job.end}`, textLeft, y);
+      y += 4.5;
+      if (job.description) {
+        doc.setTextColor(40, 40, 40);
+        doc.setFontSize(9.5);
+        y = wrapParagraphs(doc, job.description, textLeft, y, CONTENT_W, 4.3);
+      }
+      y += 3.5;
+    }
+    y += 2;
   }
 
   // Projects

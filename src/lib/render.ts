@@ -1,16 +1,14 @@
 import type { ResumeBundle } from "./types";
-
-function esc(text: string): string {
-  return text
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
+import {
+  escapeHtml,
+  formatRichText,
+  groupExperience,
+} from "./experience";
 
 export function renderResume(root: HTMLElement, bundle: ResumeBundle): void {
   const { config, profile, portfolio } = bundle;
   const name = profile.name || config.name;
+  const companies = groupExperience(profile.experience);
 
   const schema = {
     "@context": "https://schema.org",
@@ -30,14 +28,14 @@ export function renderResume(root: HTMLElement, bundle: ResumeBundle): void {
 
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="${esc(config.sources.portfolio)}" rel="noopener">
-          <img class="brand-logo" src="/assets/images/logo.png" alt="${esc(config.brand)}" width="220" height="70">
+        <a class="brand" href="${escapeHtml(config.sources.portfolio)}" rel="noopener">
+          <img class="brand-logo" src="/assets/images/logo.png" alt="${escapeHtml(config.brand)}" width="220" height="70">
           <span class="brand-mark">Resume</span>
         </a>
         <nav class="site-nav" aria-label="Primary">
-          <a class="nav-link" href="${esc(config.sources.portfolio)}" rel="noopener">Portfolio</a>
-          <a class="nav-link" href="${esc(config.sources.blog)}" rel="noopener">Blog</a>
-          <a class="nav-link" href="${esc(config.sources.github)}" rel="noopener">Open-Source</a>
+          <a class="nav-link" href="${escapeHtml(config.sources.portfolio)}" rel="noopener">Portfolio</a>
+          <a class="nav-link" href="${escapeHtml(config.sources.blog)}" rel="noopener">Blog</a>
+          <a class="nav-link" href="${escapeHtml(config.sources.github)}" rel="noopener">Open-Source</a>
           <button class="btn export-btn" type="button" id="export-pdf">Export PDF</button>
         </nav>
       </div>
@@ -48,47 +46,64 @@ export function renderResume(root: HTMLElement, bundle: ResumeBundle): void {
         <section class="hero reveal" data-reveal="fade-up">
           <div class="hero-portrait">
             <div class="portrait-frame">
-              <img src="/assets/images/pfp.jpg" alt="${esc(name)}" width="420" height="420">
+              <img src="/assets/images/pfp.jpg" alt="${escapeHtml(name)}" width="420" height="420">
             </div>
           </div>
           <div class="hero-copy">
-            <p class="eyebrow">${esc(config.brand)}</p>
-            <h1 class="hero-title">${esc(name)}</h1>
-            <p class="lead">${esc(profile.headline)}</p>
-            <p class="meta-line">${esc(profile.location)} · ${esc(config.email)} · Discord ${esc(config.discord)}</p>
-            <p class="tagline">${esc(config.tagline)}</p>
+            <h1 class="hero-title">${escapeHtml(name)}</h1>
+            <p class="lead">${escapeHtml(profile.headline)}</p>
+            <p class="meta-line">${escapeHtml(profile.location)} · ${escapeHtml(config.email)} · Discord ${escapeHtml(config.discord)}</p>
+            <p class="tagline">${escapeHtml(config.tagline)}</p>
           </div>
         </section>
 
         <section class="resume-section reveal" data-reveal="fade-up">
           <h2>About</h2>
-          <p class="about-text">${esc(profile.about)}</p>
+          <div class="rich-text about-text">${formatRichText(profile.about)}</div>
         </section>
 
         <section class="resume-section reveal" data-reveal="fade-up">
           <h2>Core Skills</h2>
           <ul class="skill-list">
-            ${config.coreSkills.map((s) => `<li>${esc(s)}</li>`).join("")}
+            ${config.coreSkills.map((s) => `<li>${escapeHtml(s)}</li>`).join("")}
           </ul>
         </section>
 
         <section class="resume-section reveal" data-reveal="fade-up">
           <h2>Experience</h2>
-          <ol class="experience-list">
-            ${profile.experience
-              .map(
-                (job) => `
-              <li class="experience-item">
-                <div class="experience-head">
-                  <h3>${esc(job.title)}</h3>
-                  <p class="company">${esc(job.company)}</p>
-                  <p class="dates"><time>${esc(job.start)}</time> – <time>${esc(job.end)}</time></p>
+          <ul class="company-list">
+            ${companies
+              .map((group) => {
+                const multi = group.roles.length > 1;
+                return `
+              <li class="company-group${multi ? " is-multi" : ""}">
+                <div class="company-header">
+                  ${
+                    group.logo
+                      ? `<img class="company-logo" src="${escapeHtml(group.logo)}" alt="" width="48" height="48">`
+                      : `<span class="company-logo company-logo-fallback" aria-hidden="true"></span>`
+                  }
+                  <div class="company-heading">
+                    <h3 class="company-name">${escapeHtml(group.company)}</h3>
+                    ${group.duration ? `<p class="company-duration">${escapeHtml(group.duration)}</p>` : ""}
+                  </div>
                 </div>
-                ${job.description ? `<p>${esc(job.description)}</p>` : ""}
-              </li>`,
-              )
+                <ol class="role-list">
+                  ${group.roles
+                    .map(
+                      (job) => `
+                    <li class="role-item">
+                      <h4 class="role-title">${escapeHtml(job.title)}</h4>
+                      <p class="dates"><time>${escapeHtml(job.start)}</time> – <time>${escapeHtml(job.end)}</time></p>
+                      ${job.description ? `<div class="rich-text role-desc">${formatRichText(job.description)}</div>` : ""}
+                    </li>`,
+                    )
+                    .join("")}
+                </ol>
+              </li>`;
+              })
               .join("")}
-          </ol>
+          </ul>
         </section>
 
         <section class="resume-section reveal" data-reveal="fade-up">
@@ -99,14 +114,14 @@ export function renderResume(root: HTMLElement, bundle: ResumeBundle): void {
                 (p) => `
               <li class="project-item">
                 <div class="project-head">
-                  <h3>${p.url ? `<a href="${esc(p.url)}" rel="noopener">${esc(p.name)}</a>` : esc(p.name)}</h3>
-                  <p class="project-meta">${esc(p.contributions)} · ${esc(p.timeline)}${
+                  <h3>${p.url ? `<a href="${escapeHtml(p.url)}" rel="noopener">${escapeHtml(p.name)}</a>` : escapeHtml(p.name)}</h3>
+                  <p class="project-meta">${escapeHtml(p.contributions)} · ${escapeHtml(p.timeline)}${
                     p.peakCcu && p.peakCcu !== "N/A"
-                      ? ` · Peak ${esc(p.peakCcu)} CCU`
+                      ? ` · Peak ${escapeHtml(p.peakCcu)} CCU`
                       : ""
                   }</p>
                 </div>
-                <p class="project-point">• ${esc(p.summary)}</p>
+                <p class="project-point">• ${escapeHtml(p.summary)}</p>
               </li>`,
               )
               .join("")}
@@ -121,14 +136,14 @@ export function renderResume(root: HTMLElement, bundle: ResumeBundle): void {
           .map(
             (s) => `
           <li>
-            <a href="${esc(s.url)}" rel="me noopener" title="${esc(s.label)}">
-              <span>${esc(s.label)}</span>
+            <a href="${escapeHtml(s.url)}" rel="me noopener" title="${escapeHtml(s.label)}">
+              <span>${escapeHtml(s.label)}</span>
             </a>
           </li>`,
           )
           .join("")}
       </ul>
-      <p class="footer-note">Use the above connections to learn more about me. Portfolio lives on <a href="${esc(config.sources.portfolio)}">igottic.com</a>.</p>
+      <p class="footer-note">Use the above connections to learn more about me. Portfolio lives on <a href="${escapeHtml(config.sources.portfolio)}">igottic.com</a>.</p>
     </footer>
 
     <script type="application/ld+json">${JSON.stringify(schema)}</script>
@@ -140,7 +155,6 @@ export function renderLoading(root: HTMLElement): void {
     <div class="grain" aria-hidden="true"></div>
     <main class="site-main">
       <div class="inner loading-state">
-        <p class="eyebrow">iGottic</p>
         <h1 class="hero-title">Loading resume…</h1>
       </div>
     </main>
@@ -152,9 +166,8 @@ export function renderError(root: HTMLElement, message: string): void {
     <div class="grain" aria-hidden="true"></div>
     <main class="site-main">
       <div class="inner loading-state">
-        <p class="eyebrow">iGottic</p>
         <h1 class="hero-title">Couldn’t load resume</h1>
-        <p class="lead">${esc(message)}</p>
+        <p class="lead">${escapeHtml(message)}</p>
         <button class="btn" type="button" onclick="location.reload()">Retry</button>
       </div>
     </main>
