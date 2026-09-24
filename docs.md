@@ -21,7 +21,14 @@ npm run dev
 
 ## Export PDF
 
-Use **Export PDF**. The file is selectable text (not a screenshot), with human-readable pages for about, skills, experience, projects, and links, plus PDF metadata.
+Use **Export PDF**. The file is selectable text optimized for ATS systems:
+
+- Single-column layout with standard Helvetica fonts (no decorative images)
+- Plain labeled contact fields (email, LinkedIn, portfolio, Discord, location)
+- Standard section headings: Professional Summary, Skills, Work Experience, Projects
+- ASCII hyphens and `*` bullets; role-first experience (title, company, dates)
+- PDF metadata includes name, headline, and skill keywords
+
 
 ## Build / deploy
 
