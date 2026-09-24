@@ -52,7 +52,12 @@ export function renderResume(root: HTMLElement, bundle: ResumeBundle): void {
           <div class="hero-copy">
             <h1 class="hero-title">${escapeHtml(name)}</h1>
             <p class="lead">${escapeHtml(profile.headline)}</p>
-            <p class="meta-line">${escapeHtml(profile.location)} · ${escapeHtml(config.email)} · Discord ${escapeHtml(config.discord)}</p>
+            <p class="meta-line">${escapeHtml(profile.location)} · Discord ${escapeHtml(config.discord)}</p>
+            <p class="meta-line contact-line">
+              <a href="mailto:${escapeHtml(config.email)}">${escapeHtml(config.email)}</a>
+              ·
+              <a href="${escapeHtml(config.sources.linkedin)}" rel="noopener">${escapeHtml(config.sources.linkedin.replace(/^https?:\/\//, ""))}</a>
+            </p>
             <p class="tagline">${escapeHtml(config.tagline)}</p>
           </div>
         </section>

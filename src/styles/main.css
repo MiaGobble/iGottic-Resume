@@ -216,9 +216,23 @@ a:hover {
 }
 
 .meta-line {
-  margin: 0 0 1rem;
+  margin: 0 0 0.35rem;
   color: var(--taupe);
   font-size: 0.92rem;
+}
+
+.meta-line.contact-line {
+  margin-bottom: 1rem;
+}
+
+.meta-line a {
+  color: var(--blush);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.meta-line a:hover {
+  color: var(--cream);
 }
 
 .tagline {

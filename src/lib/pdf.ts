@@ -245,12 +245,19 @@ export async function exportResumePdf(bundle: ResumeBundle): Promise<void> {
   doc.setTextColor(100, 100, 100);
   const contactBits = [
     profile.location,
-    config.email,
     `Discord ${config.discord}`,
   ]
     .filter(Boolean)
     .join("  ·  ");
   headerY = wrap(doc, contactBits, headerTextX, headerY, headerTextW, 4);
+  headerY = wrap(
+    doc,
+    `${config.email}  ·  ${config.sources.linkedin}`,
+    headerTextX,
+    headerY,
+    headerTextW,
+    4,
+  );
 
   y = Math.max(y, headerY + 4);
 
