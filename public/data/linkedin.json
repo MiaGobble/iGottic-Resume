@@ -2,7 +2,7 @@
   "name": "Mia Gobble",
   "headline": "Producer & Generalist Developer",
   "location": "Charlotte, North Carolina, United States",
-  "about": "Since I was 10 years old I have had an undying passion for game development across multiple disciplines. I've always had my eyes set on the full picture of projects; I conceptualize, produce, release, and maintain games with the vision of making truly great games that people care about.\n\nI've had excellent opportunities during my career so far, previously running a very successful studio (Iconic Gaming), and now starting up a new one (Oxomo Games). I've also worked for massive projects with billions of play sessions and up to hundreds of thousands of concurrent players. My own projects kept loyal playerbases for years!\n\nMy employers have always recognized my strengths: pragmatic leadership and development that knows how to stick to roadmaps and deadlines. That being said, I would consider myself excellent at taking calculated risks to make mechanically and stylistically unique projects that feel fresh to newly discovered audiences.\n\nI'm always on the lookout for new opportunities! If you want to chat about employment or partnership opportunities, feel free to reach out to me via e-mail or Discord. You can learn more about me on my website (igottic.com), where I break down the best projects I've been a part of, and what I do.",
+  "about": "Since I was 10 years old I have had an undying passion for game development across multiple disciplines. I've always had my eyes set on the full picture of projects; I conceptualize, produce, release, and maintain games with the vision of making truly great games that people care about.\n\nI've had excellent opportunities during my career so far, previously running a very successful studio (Iconic Gaming), and now starting up a new one (Oxomo Games). I've also worked for massive projects with billions of play sessions and up to hundreds of thousands of concurrent players. My own projects kept loyal playerbases for years!\n\nMy employers have always recognized my strengths: pragmatic leadership and development that knows how to stick to roadmaps and deadlines. That being said, I would consider myself excellent at taking calculated risks to make mechanically and stylistically unique projects that feel fresh to newly discovered audiences.",
   "experience": [
     {
       "title": "Talent Manager & Lead Developer",
@@ -10,7 +10,7 @@
       "start": "Aug 2026",
       "end": "Present",
       "current": true,
-      "description": "I now handle talent management at Tencell Studios in addition to my development work. Some of my new responsibilities include talent outreach, interview processing, skillset evaluation, and more."
+      "description": "- Manage talent outreach, interview processing, and skillset evaluation in addition to ongoing lead development responsibilities at Tencell Studios.\n- Connect qualified talent with development opportunities across released and new projects."
     },
     {
       "title": "Producer & Lead Developer",
@@ -18,7 +18,7 @@
       "start": "Aug 2024",
       "end": "Aug 2026",
       "current": false,
-      "description": "I used to work on Slap Battles for LiveOps! I took on a variety of roles, including project management, data analysis, game design, generalist development, and scrum leadership. During my time, I helped the game reach a peak of 149k concurrent users. Under my leadership, I directly increased engagement, retention, and revenue, all while keeping the community satisfied.\n\nI loved working at Slap Battles because it allowed me to be autonomous over design and execution, which gave me room to throw darts at the board and see what sticks. With both my production and development, I had the opportunity to ship multiple major features, content updates, and more, all by myself or alongside the team.\n\nSome major updates I worked on include Guide and Dave bossfights (spiking engagement up to 1400% short-term), long-term progression like masteries (increasing engagement by 90%), shop content and improved UX (increasing revenue by 25%), and more!\n\nI am now working on a new project under this company. Stay tuned!"
+      "description": "- Led LiveOps, project management, data analysis, game design, generalist development, and scrum leadership for Slap Battles, helping the game reach 149k concurrent users.\n- Shipped major features and content updates independently and alongside the team while directly improving engagement, retention, and revenue.\n- Developed Guide and Dave bossfights that drove a short-term engagement spike of up to 1,400%.\n- Built long-term progression through masteries, increasing engagement by 90%, and delivered shop content and UX improvements that increased revenue by 25%."
     },
     {
       "title": "Generalist Developer",
@@ -26,7 +26,7 @@
       "start": "Mar 2024",
       "end": "Aug 2024",
       "current": false,
-      "description": "Prior to being a producer and lead developer, I was a generalist development contractor, working on critical reworks to Slap Battles."
+      "description": "- Completed contract work to ship updates across multiple skillsets\n- Completely reworked user interface\n- Added major content per specifications"
     },
     {
       "title": "Producer & CEO",
@@ -34,7 +34,7 @@
       "start": "Apr 2025",
       "end": "Present",
       "current": true,
-      "description": "Oxomo Games is a brand new studio created by me, aiming to take risks with game design and discover new audiences on Roblox. My time here is spent producing and generalizing, ensuring we get high-quality games released. We're excited to soon release Velocity and Deep Depths.\n\nThis studio is my opportunity to try design ideas and workflows before I apply a similar philosophy to my main line of work. I love to try new ideas, and even if something flops, it gives me something to learn from.\n\nI take an agile approach to management, integrating Git, Jira, and proprietary tooling into our core workflows. I'm also responsible for managing both the projects and company. For example, we are working with partners like GeekOut to fund and expand our projects."
+      "description": "- Founded and lead Oxomo Games, owning production, generalist development, project execution, and company operations for Velocity and Deep Depths.\n- Apply Agile workflows using Git, Jira, and proprietary tooling to support development and release planning.\n- Manage partnerships, including work with GeekOut to fund and expand studio projects."
     },
     {
       "title": "Research Panelist",
@@ -42,7 +42,7 @@
       "start": "Apr 2025",
       "end": "Present",
       "current": true,
-      "description": "I am a part of Meta's AR/VR Research Panel. During my time here so far, I have actively tested new AR/VR products geared towards developers of the Horizon Worlds platform, leaving critical feedback about workflows and design decisions. My work here was extremely opinionated, but my thoughts were worked into iterations on the platform."
+      "description": "- NDA tested AR/VR products in pre-production or unreleased state\n- Provided clear and concise consulting for AR/VR products\n- Recommended changes that were worked into production"
     },
     {
       "title": "Producer & CEO",
@@ -50,7 +50,7 @@
       "start": "May 2018",
       "end": "Apr 2025",
       "current": false,
-      "description": "Iconic Gaming is a studio I founded that focused on pushing creative online games on the Roblox platform. As of April 2025, I have handed off the CEO position to another leader to pursue new opportunities, and since then the studio has shut down.\n\nDuring my time at Iconic Gaming, I created back-to-back projects that succeeded, often times peaking at 2k-12k CCU. I handled production, lead development, hiring management, and more, and employed many people under me.\n\nThe best work I had under the studio was successfully A/B testing a rollout of multiple features to increase engagement in No-Scope Arcade. Such features included stronger long-term progression, addition of bots to fill empty player slots, and daily rewards to drive retention. All of this led to a 2000% increase in concurrent players, cementing the game to have long-term success!\n\nThis experience solidified my role as a professional on the platform and helped me learn a lot of what I know now, and without this studio I would not be where I am now. My new studio, Oxomo Games, uses experience (usually from mistakes) to execute development on new projects."
+      "description": "- Founded and led a Roblox game studio whose projects typically reached 2K–12K concurrent users.\n- Owned production, lead development, hiring management, and team operations while employing multiple contributors.\n- A/B-tested progression, bots to fill empty player slots, and daily rewards in No-Scope Arcade, increasing concurrent players by 2,000% and supporting long-term retention.\n- Transitioned out of the CEO role in April 2025 to pursue new opportunities; the studio subsequently closed."
     },
     {
       "title": "Event Organizer",
@@ -58,7 +58,7 @@
       "start": "Jul 2021",
       "end": "Jan 2025",
       "current": false,
-      "description": "I previously created developer-oriented educational events on the Roblox platform. These events aimed to be engaging, memorable, and valuable. Events I held related to Roblox game development, and aimed to help new developers get their feet off the ground. Unfortunately Roblox didn't do much with the events platform, so as such, I decided to step down."
+      "description": "- Created developer-oriented educational events on Roblox's events page\n- Organized and designed memorable events that were a part of Roblox marketing\n- Invited as a program member in the initial launch of the platform"
     },
     {
       "title": "Freelance Generalist Developer",
@@ -66,7 +66,7 @@
       "start": "May 2014",
       "end": "Mar 2024",
       "current": false,
-      "description": "Since 2014 and until mid 2024, I did freelance generalist development work on the Roblox platform. During this time I had taken short-term work with companies like Swenzje Games, Outstanding Move, and Level Up Gaming. I contributed to many projects on the platform with a variety of work."
+      "description": "- Completed freelance generalist development work between 2014 and 2024.\n- Contracted under Swenzje Games for parkour movement system in Combat Warriors\n- Short-term employed under Outstanding Move for programming work on an unreleased project\n- Short-term employed under Level Up Gaming for work on Super Hero Tycoon and another unreleased project\n- Solo-developed my own successful projects, leading to the creation of Iconic Gaming"
     },
     {
       "title": "Accelerator Program Member",
@@ -74,7 +74,7 @@
       "start": "Jun 2023",
       "end": "Mar 2024",
       "current": false,
-      "description": "Iconic Gaming was being funded and guided by the Roforco Accelerator program as a part of YCombinator 22. The funded project was a Roblox game that aimed to take a twist on the disaster genre. The game was under Iconic Gaming, named \"Disaster Masters\", and was a one-against-all game where one person destroyed the world and players while the rest survived.\n\nI was also a community partner for Roforco before it started, giving insight and tips for running the business."
+      "description": "- Entered into Roforco Accelerator as a part of YCombinator 22.\n- Managed budget and funding from accelerator to pay contractors for work\n- Created Disaster Masters, a unique disaster-style survival game under Iconic Gaming\n- Was one of three applicants to make it into accelerator wave\n- Previously community partner for Roforco, giving insight and tips for program"
     },
     {
       "title": "Programmer",
@@ -82,7 +82,7 @@
       "start": "Jul 2020",
       "end": "Oct 2021",
       "current": false,
-      "description": "I worked on an untitled upcoming FPS game on Roblox simply named \"Games Unite Testing Place\". I was responsible for making an additive animation system and rigid body physics system."
+      "description": "- Completed junior-level work for an unnamed first person shooter\n- Designed and programmed a custom animation system, with support for additive animation by keyframe\n- Designed and programmed a rigid body physics system to replace the Roblox default"
     }
   ]
 }

@@ -119,9 +119,19 @@ export function formatRichText(text: string): string {
 
 /** Split text into paragraphs for PDF wrapping. */
 export function splitParagraphs(text: string): string[] {
-  return text
-    .replace(/\r\n/g, "\n")
+  const normalized = text.replace(/\r\n/g, "\n");
+  const blocks = normalized
     .split(/\n{2,}/)
-    .map((p) => p.replace(/\n/g, " ").trim())
+    .map((p) => p.trim())
     .filter(Boolean);
+
+  return blocks.flatMap((block) => {
+    if (/^- /.test(block) || block.includes("\n- ")) {
+      return block
+        .split("\n")
+        .map((line) => line.trim())
+        .filter(Boolean);
+    }
+    return [block.replace(/\n/g, " ").trim()];
+  });
 }

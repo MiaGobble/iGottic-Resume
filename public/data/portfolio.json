@@ -1,49 +1,22 @@
 {
   "projects": [
     {
-      "name": "Slap Battles",
-      "creator": "Tencell",
-      "peakCcu": "146,305",
-      "timeline": "March 2024 - June 2026",
-      "contributions": "Production, Lead Generalist Development",
-      "summary": "During my time here, I led Slap Battles and directed and developed parts of the game that led to an increase in revenue, engagement, and retention.",
-      "url": "https://www.roblox.com/games/6403373529/Slap-Battles"
-    },
-    {
-      "name": "Piggy",
-      "creator": "MiniToon",
-      "peakCcu": "533,409",
-      "timeline": "June 2026 - Aug 2026",
-      "contributions": "Talent Management",
-      "summary": "I helped with connecting talent to the team for development on both already-released and new projects.",
-      "url": "https://www.roblox.com/games/4623386862/Piggy"
+      "name": "High Peaks",
+      "creator": "Oxomo Games",
+      "peakCcu": "N/A",
+      "timeline": "Jul 2026 - Present",
+      "contributions": "Owner, Production, Lead Development",
+      "summary": "Created and lead High Peaks as a casual game under Oxomo Games.",
+      "url": "https://www.roblox.com/games/75617342399094/High-Peaks"
     },
     {
       "name": "Knockout!",
       "creator": "blade_stack",
       "peakCcu": "624,983",
-      "timeline": "June 2026 - Present",
+      "timeline": "Jun 2026 - Present",
       "contributions": "Talent Management",
-      "summary": "I helped with connecting talent to the team for development on both already-released and new projects.",
+      "summary": "Connected talent to team for LiveOps development.",
       "url": "https://www.roblox.com/games/136764190843219/Knockout"
-    },
-    {
-      "name": "High Peaks",
-      "creator": "MiniToon",
-      "peakCcu": "N/A",
-      "timeline": "July 2026 - Present",
-      "contributions": "Owner, Production, Lead Development",
-      "summary": "Owner, Production, Lead Development for High Peaks.",
-      "url": "https://www.roblox.com/games/75617342399094/High-Peaks"
-    },
-    {
-      "name": "Velocity",
-      "creator": "iGottic",
-      "peakCcu": "N/A",
-      "timeline": "Jan 2026 - Present",
-      "contributions": "Owner, Production, Lead Development",
-      "summary": "My job here is to lead the project to make sure everything moves at the pace we need.",
-      "url": "https://www.roblox.com/games/70959785823053/Velocity"
     },
     {
       "name": "Care For Cats!",
@@ -51,34 +24,69 @@
       "peakCcu": "9,164",
       "timeline": "Jan 2026 - Present",
       "contributions": "Talent Management",
-      "summary": "I helped with connecting talent to the team for development on both already-released and new projects.",
+      "summary": "Connected talent to team for LiveOps development.",
       "url": "https://www.roblox.com/games/103510455221561/Care-for-Cats"
     },
     {
-      "name": "Deep Depths",
-      "creator": "iGottic",
+      "name": "Velocity",
+      "creator": "Oxomo Games",
       "peakCcu": "N/A",
-      "timeline": "March 2025 - Present",
+      "timeline": "Jan 2026 - Present",
       "contributions": "Owner, Production, Lead Development",
-      "summary": "Like Velocity, my job here is to lead the project to make sure everything moves at the pace we need.",
+      "summary": "Created originally as a part of DoBig's 24-hour gamejam; won first place alongside the $50k prize. Now being expanded as a fully-produced project under Oxomo Games.",
+      "url": "https://www.roblox.com/games/70959785823053/Velocity"
+    },
+    {
+      "name": "Deep Depths",
+      "creator": "Oxomo Games",
+      "peakCcu": "N/A",
+      "timeline": "Mar 2025 - Present",
+      "contributions": "Owner, Production, Lead Development",
+      "summary": "Created, led development, and produced for Deep Depths as a gritty roguelike survival game under Oxomo Games. Currently considering direct support from multiple companies, including GeekOut.",
       "url": "https://www.roblox.com/games/127006305811791/Deep-Depths"
     },
     {
+      "name": "Piggy",
+      "creator": "MiniToon",
+      "peakCcu": "533,409",
+      "timeline": "Jun 2026 - Aug 2026",
+      "contributions": "Talent Management",
+      "summary": "Connected talent to development team, including for Piggy and related projects.",
+      "url": "https://www.roblox.com/games/4623386862/Piggy"
+    },
+    {
+      "name": "Slap Battles",
+      "creator": "Tencell",
+      "peakCcu": "146,305",
+      "timeline": "Mar 2024 - Jun 2026",
+      "contributions": "Production, Lead Generalist Development",
+      "summary": "Led production and generalist development for Slap Battles, reaching 146,305 peak CCU; shipped bossfights, masteries, shop content, and UX improvements that drove up to 1,400% short-term engagement growth, 90% higher engagement, and 25% higher revenue.",
+      "url": "https://www.roblox.com/games/6403373529/Slap-Battles"
+    },
+    {
+      "name": "Caliber",
+      "creator": "Iconic Gaming",
+      "peakCcu": "N/A",
+      "timeline": "Dec 2020 - Apr 2025",
+      "contributions": "Owner, Lead Development",
+      "summary": "Solo developed a first-person shooter with moderate success before transitioning the project to a team. Systems from Caliber were also used in No-Scope Arcade and Pistol 1v1, both very successful projects."
+    },
+    {
       "name": "No-Scope Arcade",
-      "creator": "iGottic",
+      "creator": "Iconic Gaming",
       "peakCcu": "12,000",
       "timeline": "Feb 2021 - Apr 2025",
       "contributions": "Game Owner & Lead Dev",
-      "summary": "I eventually transferred development to a team, at which point I focused on leadership.",
+      "summary": "Owned and led development before transitioning the project to a team; A/B-tested long-term progression, bots, and daily rewards that increased concurrent players by 2,000%.",
       "url": "https://www.roblox.com/games/6407649031/UPDATE-No-Scope-Arcade"
     },
     {
       "name": "No-Scope Sniping",
-      "creator": "iGottic",
+      "creator": "Iconic Gaming",
       "peakCcu": "5,000",
-      "timeline": "May 2020 - Apr 2025",
+      "timeline": "Jun 2018 - Apr 2025",
       "contributions": "Game Owner & Lead Dev",
-      "summary": "Every new major update of this game helped me learn a lot of what I know now, ranging from leadership to development, and everything in-between.",
+      "summary": "Solo-developed a first-person shooter that was a top performer on Roblox, eventually expanding it into a franchise with reworks and separate releases. Featured as a top first-person shooter on the platform between 2018-2022.",
       "url": "https://www.roblox.com/games/5081773298/No-Scope-Sniping"
     },
     {
